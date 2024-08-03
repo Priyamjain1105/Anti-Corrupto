@@ -24,6 +24,68 @@ This platform not only encourages transparency but also fosters a culture of acc
 
 ### 1. Run PostgreSQL Database
 
-- **Start the database**:
+  - **Start the database**:
+    ```bash
+    docker-compose up
+    ```
+  - **Access the database container**:
+    ```bash
+    docker exec -it <container_id> /bin/bash
+    ```
+  
+### 2. Run the Backend
+  - **Install dependencies:**
+    ```bash
+      npm install
+    ```
+  - **Migrate the database:**
+    ```bash
+    npx prisma migrate dev
+    ```
+  - **Generate Prisma client:**
+    ```bash
+    npx prisma generate
+    ```
+  - **Launch Prisma Studio:**
+    ```bash
+    npx prisma studio
+    ```
+
+### 3. Eun the Mobile Frontend
+  - **Install dependencies:**
+    ```bash
+    npm install
+    ```
+  - **Start Expo Server:**
+    ```bash
+    npx expo start
+    ```
+  - **Run on Device**
+    - Press `a ` for Android
+    - Press `i` for IOS
+
+### 4. Environment Variables
+  Ensure you have a `.env` file with the following content:
+  ```env
+  DATABASE_URL=postgresql://postgres:123@db:5432/capstone?schema=public
+  ACCESS_TOKEN_PRIVATE_KEY=
+  REFRESH_TOKEN_PRIVATE_KEY=
+  PORT=3000
+  ```
+
+### 5. Run the ML Model
+- **Install Python dependencies:**
   ```bash
-  docker-compose up
+  pip3 install -r requirements.txt
+  ```
+- **Execute the model:**
+  ```bash
+  python main.py
+  ```
+  
+### 6. Deploy Smart Contracts
+- Deploy contracts using Hardhat:
+```bash
+npx hardhat run scripts/deploy.js --network sepolia
+```
+- Get ABI in artifacts.
