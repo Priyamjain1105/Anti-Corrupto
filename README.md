@@ -1,47 +1,29 @@
-# Anti Corrupto
+# 🛡️ Anti Corrupto
 
-In today's governance landscape, transparency and accountability are indispensable for fostering trust
-and combatting corruption. Manual processes and opaque systems often facilitate malfeasance,
-leading to public disillusionment. This project addresses these challenges by harnessing innovative
-technologies, notably blockchain and analytics, to revolutionize governance practices. Through
-blockchain-powered systems like automated traffic monitoring and automated challan system through
-edge computing and a secure land registry, tamper-proof records are established, minimizing
-corruption opportunities. Smart contracts automate processes such as ticketing and fund allocation,
-reducing bribery risks. A secure whistleblower platform fosters accountability. Data-driven insights
-enable efficient resource allocation. This platform not only encourages transparency but also fosters a
-culture of accountability within governmental institutions. Addressing issues in land registry, such as
-stamp duty evasion and undervaluation, the project aims to restore public trust in governmental
-systems. The project sets a precedent for responsible and effective administration, ultimately fostering
-a more equitable and just society
+## Overview
 
-# To run postgres database
-- docker compose up
-- docker exec -it container_id /bin/bash
+In today's governance landscape, **transparency** and **accountability** are indispensable for fostering trust and combating corruption. Manual processes and opaque systems often facilitate malfeasance, leading to public disillusionment. This project addresses these challenges by harnessing innovative technologies, notably **blockchain** and **analytics**, to revolutionize governance practices.
 
-# How to Run Backend
-- npm i
-- npx prisma migrate dev
-- npx prisma generate
-- npx prisma studio
+### Key Features
 
-# How to Run Mobile Frontend
-- npm i
-- npx expo start
-- a (for android)
-- i (for ios)
+- **Blockchain-Powered Systems**: Implement automated traffic monitoring and automated challan systems through edge computing and a secure land registry to establish tamper-proof records, minimizing corruption opportunities.
 
-# Backend env file
-- DATABASE_URL=postgresql://postgres:123@db:5432/capstone?schema=public
-- ACCESS_TOKEN_PRIVATE_KEY=
-- REFRESH_TOKEN_PRIVATE_KEY=
-- PORT=3000
+- **Smart Contracts**: Automate processes such as ticketing and fund allocation to reduce bribery risks.
 
+- **Secure Whistleblower Platform**: Foster accountability and provide a secure way for whistleblowers to report misconduct.
 
-# How to Run ML Model
-- pip3 install -r requirements.txt
-- python main.py
+- **Data-Driven Insights**: Enable efficient resource allocation through analytics.
 
+### Goals
 
-# deploy contracts hardhat
-npx hardhat run scripts/deploy.js --network sepolia
-(get abhi in artifacts)
+This platform not only encourages transparency but also fosters a culture of accountability within governmental institutions. By addressing issues in land registry, such as stamp duty evasion and undervaluation, the project aims to restore public trust in governmental systems. It sets a precedent for responsible and effective administration, ultimately fostering a more equitable and just society.
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Run PostgreSQL Database
+
+- **Start the database**:
+  ```bash
+  docker-compose up
